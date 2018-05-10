@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const PeopleCard = (props) => {
    const{name, planet, species, population} = props

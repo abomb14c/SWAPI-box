@@ -22,7 +22,9 @@ class App extends Component {
     const cleanPeople = await getPeopleData()
     this.setState({cleanPeople,
       crawlData: [],
-      activeCategory: "people"
+      activeCategory: "people",
+      cleanPlanets: [],
+      cleanVehicles: []
     })
   }
 
@@ -30,7 +32,9 @@ class App extends Component {
     const cleanPlanets = await getPlanets()
     this.setState({cleanPlanets,
       crawlData:[],
-      activeCategory:"planets"
+      activeCategory:"planets",
+      cleanPeople: [],
+      cleanVehicles: []
     })
   }
 
@@ -38,7 +42,9 @@ class App extends Component {
     const cleanVehicles = await getVehicles()
     this.setState({cleanVehicles,
       crawlData:[],
-      activeCategory: "vehicles"
+      activeCategory: "vehicles",
+      cleanPeople: [],
+      cleanPlanets: []
     })
   }
 
@@ -66,11 +72,15 @@ class App extends Component {
         {this.state.crawlData &&
           <CrawlText data={this.state.crawlData} />
         }
-        {this.state.cleanPeople.length || this.state.cleanPlanets.length &&
+        
+        {this.state.cleanPeople.length || 
+        this.state.cleanPlanets.length ||
+        this.state.cleanVehicles.length &&
 
         <CardSection activeCategory={this.state.activeCategory} 
         people={this.state.cleanPeople}
-        planets={this.state.cleanPlanets}/>
+        planets={this.state.cleanPlanets}
+        vehicles={this.state.cleanVehicles}/>
         }
       </div>
     );
