@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-// import ButtonContainer from './ButtonContainer/ButtonContainer.js'
 import {getCrawlText} from './utils/helper.js'
-import { CrawlText} from './CrawlText/CrawlText'
+import { CrawlText } from './CrawlText/CrawlText'
 import {getPeopleData, getPlanets, getVehicles} from './utils/ApiCalls'
+import CardSection from './CardSection/CardSection'
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -60,6 +61,10 @@ class App extends Component {
         </div>
         {this.state.crawlData &&
           <CrawlText data={this.state.crawlData} />
+        }
+        {this.state.cleanPeople.length &&
+
+        <CardSection people={this.state.cleanPeople}/>
         }
       </div>
     );
