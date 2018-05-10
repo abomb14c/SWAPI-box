@@ -31,21 +31,27 @@
     const url = 'https://swapi.co/api/planets'
     const response = await fetch(url)
     const data = await response.json()
-    const planetResidents = await getPlanetPeople(data.results)
+    const planets = await data.results.map(async planet => {
+      const planetResidents = await getPlanetPeople(planet.residents)
+      return{
+        name: planet.name,
+        terrain: planet.terrain,
+        population: planet.population,
+        climate: planet.climate,
+        residents: planetResidents
+      }
+    })
     
-    return planetResidents
+    return Promise.all(planets)
   }
 
-  const getPlanetPeople = (data) => {
-    const unresolvedPromises = data.map( result => {
-      const planets = result.residents.map( async resident => {
-        const response = await fetch(resident)
-        const planetData = await response.json()
+  const getPlanetPeople = (url) => {
+    const unresolvedPromises = url.map(async result => {
+        const response = await fetch(result)
+        const residents= await response.json()
 
-        return planetData.name
+        return residents.name
       })
-      return Promise.all([...planets, result])
-    })
     return Promise.all(unresolvedPromises)
   }
 
@@ -69,28 +75,3 @@
       getPlanets,
       getVehicles
   }
-
-
-//   const url = 'https://swapi.co/api/people/'
-//   const response = await fetch(url)
-//   const data = await response.json()
-//   const people = await data.results.map (async person => {
-//     const homePlanet = await getHomeWorld(person.homeworld)
-//     const species= await getSpecies(person.species)
-//     return {
-//       name: person.name,
-//       ...homePlanet,
-//       species
-//     }
-//   }) 
-//   return Promise.all(people)
-// }
-
-  // fetchStaffBio= (staffMembers) => {
-  //   const unresolvedData = staffMembers.bio.map(staffMember => {
-  //     return fetch(staffMember.info)
-  //     .then(response => response.json())
-  //     .then(data => ({...data, name: staffMember.name}))
-  //   })
-  //   return Promise.all(unresolvedData)
-  // }
