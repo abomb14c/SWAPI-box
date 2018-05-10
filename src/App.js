@@ -13,7 +13,6 @@ class App extends Component {
       cleanPeople: [],
       cleanPlanets: [],
       cleanVehicles: []
-
     }
   }
   
