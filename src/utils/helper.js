@@ -14,4 +14,7 @@ const getRandom= (results) => {
     return results[Math.floor(Math.random()*results.length)]
 }
 
-export default getCrawlText
+
+export  {getCrawlText
+
+}
