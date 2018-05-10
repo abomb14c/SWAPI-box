@@ -22,7 +22,8 @@ class App extends Component {
     const cleanPeople = await getPeopleData()
     this.setState({cleanPeople,
       crawlData: [],
-      activeCategory: "people"
+      activeCategory: "people",
+      cleanPlanets: []
     })
   }
 
@@ -30,7 +31,8 @@ class App extends Component {
     const cleanPlanets = await getPlanets()
     this.setState({cleanPlanets,
       crawlData:[],
-      activeCategory:"planets"
+      activeCategory:"planets",
+      cleanPeople: []
     })
   }
 
