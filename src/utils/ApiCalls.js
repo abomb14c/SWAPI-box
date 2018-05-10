@@ -63,7 +63,7 @@
       return {
         name: vehicle.name,
         model: vehicle.model,
-        class: vehicle.vehicle_class,
+        type: vehicle.vehicle_class,
         passengers: vehicle.passengers
       }
     })
