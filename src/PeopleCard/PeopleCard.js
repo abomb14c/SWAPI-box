@@ -1,4 +1,5 @@
 import React from 'react'
+import './PeopleCard.css'
 
 const PeopleCard = (props) => {
    const{name, planet, species, population} = props
@@ -6,13 +7,25 @@ const PeopleCard = (props) => {
     // console.log(name)
     return (
         <article className="person-card">
-        <h3>name: {name}</h3>
-        <h3>homeworld: {planet}</h3>
-        <h3>species: {species}</h3>
-        <h3>population: {population}</h3>
+            <section className="name-section">
+                <h1 className="person-name">{name}</h1>
+            </section>
+            <div className="content-div">
+                <p className="description-title">Origin</p>
+                <h3 className="description-content">{planet}</h3>
+            </div>
+            <hr></hr>
+            <div className="content-div">
+                <p className="description-title">Species</p>
+                <h3 className="description-content">{species}</h3>
+            </div>
+            <hr></hr>
+            <div className="content-div">
+                <p className="description-title">Population</p>
+                <h3 className="description-content">{population}</h3>
+            </div>
         </article>
     )
-    
 }
 
 export default PeopleCard

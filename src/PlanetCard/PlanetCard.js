@@ -1,15 +1,33 @@
 import React from 'react'
+import './PlanetCard.css'
 
 const PlanetCard = (props) => {
     const{name, terrain, population, climate, residents} = props
 
      return (
-         <article className="person-card">
-         <h3>name: {name}</h3>
-         <h3>terrain: {terrain}</h3>
-         <h3>population: {population}</h3>
-         <h3>climate: {climate}</h3>
-         <h3>residents: {residents}</h3>
+         <article className="planet-card">
+            <section className="planet-name-section">
+                <h1 className="planet-name">{name}</h1>
+            </section>
+            <div className="content-div">
+                <p className="description-title">Terrain</p>
+                <h3 className="description-content">{terrain}</h3>
+            </div>
+            <hr></hr>
+            <div className="content-div">
+                <p className="description-title">Population</p>
+                <h3 className="description-content">{population}</h3>
+            </div>
+            <hr></hr>
+            <div className="content-div">
+                <p className="description-title">Climate</p>
+                <h3 className="description-content">{climate}</h3>
+            </div>
+            <hr></hr>
+            <div className="content-div">
+                <p className="description-title">Residents</p>
+                <h3 className="description-content residents">{residents}</h3>
+            </div>
          </article>
      )
      

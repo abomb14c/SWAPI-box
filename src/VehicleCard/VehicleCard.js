@@ -1,17 +1,34 @@
 import React from 'react'
+import './VehicleCard.css'
 
 const VehicleCard = (props) => {
    const{name, model, type, passengers} = props
 
     return (
-        <article className="person-card">
-        <h3>name: {name}</h3>
-        <h3>model: {model}</h3>
-        <h3>class: {type}</h3>
-        <h3>passengers: {passengers}</h3>
+        <article className="vehicle-card">
+            <section className="vehicle-name-section">
+                <h1 className="vehicle-name">{name}</h1>
+            </section>
+            <div className="content-div">
+                <p className="description-title">Model</p>
+                <h3 className="description-content">{model}</h3>
+            </div>
+            <hr></hr>
+            <div className="content-div">
+                <p className="description-title">Class</p>
+                <h3 className="description-content">{type}</h3>
+            </div>
+            <hr></hr>
+            <div className="content-div">
+                <p className="description-title">Passengers</p>
+                <h3 className="description-content">{passengers}</h3>
+            </div>
         </article>
     )
     
 }
 
 export default VehicleCard
+
+
+
