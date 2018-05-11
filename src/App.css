@@ -13,20 +13,20 @@
 }
 
 .data-button {
-  height: 40px;
-  width: 100px;
-  margin-bottom: 15px;
   background: none;
+  height: 40px;
   color: #fff;
   font-size: 16px;
+  margin-bottom: 15px;
   outline: none;
-}
-
-.data-button:hover {
-  background-color: #EB544D;
+  width: 100px;
 }
 
 .data-button:active {
   background-color: #EB544D;
   outline: none;
+}
+
+.data-button:hover {
+  background-color: #EB544D;
 }

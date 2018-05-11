@@ -6,36 +6,35 @@ margin: 0;
 }
 
 hr {
-    text-align: center;
-    /* justify-content: center; */
     margin:0 auto;
+    text-align: center;
     width: 60%;
 }
 
 .person-card {
-background-color: #ffffff;
-border: 2px solid #D6D6D6;
-display: inline-block;
-height: 400px;
-left: 15px;
-margin: 3px;
-position: relative;
-width: 340px;
+    background-color: #ffffff;
+    border: 2px solid #D6D6D6;
+    display: inline-block;
+    height: 400px;
+    left: 15px;
+    margin: 3px;
+    position: relative;
+    width: 340px;
 }
 
 .person-name {
-    text-align: center;
     color: rgba(255,255,255);
     margin: none;
+    text-align: center;
     text-shadow: 4px 4px #000;
 }
 
 .name-section {
-    height: 125px;
     background-image: url('../assets/peopler-header-section.jpg');
     background-size: cover;
-    padding-top: 50px;
     font-size: 36px;
+    height: 125px;
+    padding-top: 50px;
 }
 
 .content-div{

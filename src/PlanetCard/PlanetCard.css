@@ -12,30 +12,30 @@ hr {
 }
 
 .planet-card {
-background-color: #ffffff;
-border: 2px solid #D6D6D6;
-display: inline-block;
-height: 500px;
-left: 15px;
-margin: 3px;
-position: relative;
-vertical-align: top;
-width: 340px;
+    background-color: #ffffff;
+    border: 2px solid #D6D6D6;
+    display: inline-block;
+    height: 500px;
+    left: 15px;
+    margin: 3px;
+    position: relative;
+    vertical-align: top;
+    width: 340px;
 }
 
 .planet-name {
-    text-align: center;
     color: rgba(255,255,255);
     margin: none;
+    text-align: center;
     text-shadow: 4px 4px #000;
 }
 
 .planet-name-section {
-    height: 125px;
     background-image: url('../assets/planets-section-header.jpg');
     background-size: cover;
-    padding-top: 50px;
     font-size: 36px;
+    height: 125px;
+    padding-top: 50px;
 }
 
 .content-div{
