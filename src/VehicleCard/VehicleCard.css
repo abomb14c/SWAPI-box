@@ -1,0 +1,56 @@
+*,
+*:after,
+*:before {
+box-sizing: border-box;
+margin: 0;
+}
+
+hr {
+    text-align: center;
+    margin:0 auto;
+    width: 60%;
+}
+
+.vehicle-card {
+background-color: #ffffff;
+border: 2px solid #D6D6D6;
+display: inline-block;
+height: 500px;
+left: 15px;
+margin: 3px;
+position: relative;
+vertical-align: top;
+width: 340px;
+}
+
+.vehicle-name {
+    text-align: center;
+    color: rgba(255,255,255);
+    margin: none;
+    text-shadow: 4px 4px #000;
+}
+
+.vehicle-name-section {
+    height: 140px;
+    background-image: url('../assets/vehicles-section-header.jpg');
+    background-size: cover;
+    padding-top: 50px;
+    font-size: 36px;
+}
+
+.content-div{
+    margin: 15px;
+}
+
+.description-title{
+    color: #EB544D;
+    margin-bottom: 1%;
+}
+
+.description-content {
+    font-size: 24px;
+}
+
+.residents{
+    font-size: 18px;
+}
