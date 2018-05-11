@@ -1,7 +1,6 @@
 .crawl-section {
     display: flex;
     justify-content: center;
-    height: 800px;
     perspective:250px;
     color: #feda4a;
     font-size: 60px;
