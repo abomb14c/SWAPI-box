@@ -2,11 +2,12 @@ import React from 'react'
 import './VehicleCard.css'
 
 const VehicleCard = (props) => {
-   const{name, model, type, passengers} = props
+   const{name, model, type, passengers, findFavoriteVehicle, id} = props
 
     return (
         <article className="vehicle-card">
             <section className="vehicle-name-section">
+                <button onClick={()=>findFavoriteVehicle(id)}>Favorite</button>
                 <h1 className="vehicle-name">{name}</h1>
             </section>
             <div className="content-div">

@@ -14,7 +14,8 @@ class App extends Component {
       cleanPeople: [],
       cleanPlanets: [],
       cleanVehicles: [],
-      activeCategory: ""
+      activeCategory: "",
+      favoritesArray: []
     }
   }
   
@@ -25,6 +26,27 @@ class App extends Component {
       activeCategory: "is people",
       cleanPlanets: [],
       cleanVehicles: []
+    })
+  }
+
+  findFavoritePerson = (id) => {
+    const favoritePerson = this.state.cleanPeople.find(person => person.id === id)
+    this.setState({
+      favoritesArray:[...this.state.favoritesArray, favoritePerson]
+    })
+  }
+
+  findFavoritePlanet = (id) => {
+    const favoritePlanet = this.state.cleanPlanets.find(planet => planet.id === id)
+    this.setState({
+      favoritesArray:[...this.state.favoritesArray, favoritePlanet]
+    })
+  }
+
+  findFavoriteVehicle = (id) => {
+    const favoriteVehicle = this.state.cleanVehicles.find(vehicle => vehicle.id === id)
+    this.setState({
+      favoritesArray:[...this.state.favoritesArray, favoriteVehicle]
     })
   }
 
@@ -48,6 +70,12 @@ class App extends Component {
     })
   }
 
+  setFavorites = () => {
+    this.setState({
+      activeCategory: "is favorites"
+    })
+  }
+
   componentDidMount() {
     const url = 'https://swapi.co/api/films/'
     fetch(url)
@@ -68,6 +96,7 @@ class App extends Component {
             <button className="data-button" onClick={this.setPeopleData}>people</button>
             <button className="data-button" onClick={this.setPlanetData}>planets</button>
             <button className="data-button" onClick={this.setVehicleData}>vehicles</button>
+            <button className="data-button" onClick={this.setFavorites}>Favorites</button>
         </div>
         {this.state.crawlData &&
           <CrawlText data={this.state.crawlData} />
@@ -78,8 +107,12 @@ class App extends Component {
         <CardSection activeCategory={this.state.activeCategory} 
         people={this.state.cleanPeople}
         planets={this.state.cleanPlanets}
-        vehicles={this.state.cleanVehicles}/>
-        }
+        vehicles={this.state.cleanVehicles}
+        findFavoritePerson={this.findFavoritePerson}
+        findFavoritePlanet={this.findFavoritePlanet}
+        findFavoriteVehicle={this.findFavoriteVehicle}
+        />
+      }
       </div>
     );
   }

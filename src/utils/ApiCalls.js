@@ -3,10 +3,11 @@
     const url = 'https://swapi.co/api/people/'
     const response = await fetch(url)
     const data = await response.json()
-    const people = await data.results.map (async person => {
+    const people = await data.results.map (async (person, index) => {
       const homePlanet = await getHomeWorld(person.homeworld)
       const species= await getSpecies(person.species)
       return {
+        id:`people${index}`,
         name: person.name,
         ...homePlanet,
         species
@@ -31,9 +32,10 @@
     const url = 'https://swapi.co/api/planets'
     const response = await fetch(url)
     const data = await response.json()
-    const planets = await data.results.map(async planet => {
+    const planets = await data.results.map(async (planet, index) => {
       const planetResidents = await getPlanetPeople(planet.residents)
       return{
+        id:`planet${index}`,
         name: planet.name,
         terrain: planet.terrain,
         population: planet.population,
@@ -59,8 +61,9 @@
     const url = 'https://swapi.co/api/vehicles/'
     const response = await fetch(url)
     const data = await response.json()
-    const vehicles = await data.results.map(async vehicle => {
+    const vehicles = await data.results.map(async (vehicle, index) => {
       return {
+        id:`vehicle${index}`,
         name: vehicle.name,
         model: vehicle.model,
         type: vehicle.vehicle_class,
