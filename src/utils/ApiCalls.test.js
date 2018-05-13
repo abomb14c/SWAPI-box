@@ -47,6 +47,12 @@ describe("ApiCalls", () => {
       ];
       await expect(getPeopleData()).resolves.toEqual(results);
     });
+    it('throws an error if the call is rejected', async ()=> {
+      window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })))
+      const expectedError = Error("it's not working!")
+  
+      await expect(getPeopleData()).rejects.toEqual(expectedError)
+    })
   });
 
   describe("getHomeWorld", () => {
@@ -69,6 +75,13 @@ describe("ApiCalls", () => {
       );
       await expect(getHomeWorld()).resolves.toEqual(results);
     });
+
+    it('throws an error if the call is rejected', async ()=> {
+      window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })))
+      const expectedError = Error("it's not working!")
+  
+      await expect(getHomeWorld()).rejects.toEqual(expectedError)
+    })
   });
 
   describe("getSpecies", () => {
@@ -89,6 +102,13 @@ describe("ApiCalls", () => {
 
       await expect(getSpecies()).resolves.toEqual(results);
     });
+
+    it('throws an error if the call is rejected', async ()=> {
+      window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })))
+      const expectedError = Error("it's not working!")
+  
+      await expect(getSpecies()).rejects.toEqual(expectedError)
+    })
   });
   describe("getPlanets", () => {
     beforeEach(() => {
@@ -120,6 +140,12 @@ describe("ApiCalls", () => {
       ];
       await expect(getPlanets()).resolves.toEqual(results);
     });
+    it('throws an error if the call is rejected', async ()=> {
+      window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })))
+      const expectedError = Error("it's not working!")
+  
+      await expect(getPlanets()).rejects.toEqual(expectedError)
+    })
   });
 
   describe("getVehicles", () => {
@@ -151,6 +177,13 @@ describe("ApiCalls", () => {
       ];
       await expect(getVehicles()).resolves.toEqual(results);
     });
+
+    it('throws an error if the call is rejected', async ()=> {
+      window.fetch = jest.fn().mockImplementation((() => Promise.resolve({ status: 500 })))
+      const expectedError = Error("it's not working!")
+  
+      await expect(getVehicles()).rejects.toEqual(expectedError)
+    })
   });
 });
 
