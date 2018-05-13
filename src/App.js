@@ -112,6 +112,7 @@ class App extends Component {
         findFavoritePlanet={this.findFavoritePlanet}
         findFavoriteVehicle={this.findFavoriteVehicle}
         favoritesArray={this.state.favoritesArray}
+
         />
       }
       </div>
