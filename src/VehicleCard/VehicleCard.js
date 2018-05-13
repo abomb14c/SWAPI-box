@@ -2,7 +2,7 @@ import React from 'react'
 import './VehicleCard.css'
 
 const VehicleCard = (props) => {
-   const{name, model, type, passengers, findFavoriteVehicle, id} = props
+   const{name, model, type, passengers, findFavoriteVehicle, id, category} = props
 
     return (
         <article className="vehicle-card">

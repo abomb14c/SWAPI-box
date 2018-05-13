@@ -4,7 +4,7 @@ import PlanetCard from '../PlanetCard/PlanetCard'
 import VehicleCard from '../VehicleCard/VehicleCard'
 import './CardSection.css'
 
-const CardSection = ({people, activeCategory, planets, vehicles, findFavoritePerson, findFavoritePlanet, findFavoriteVehicle}) => {
+const CardSection = ({people, activeCategory, planets, vehicles, findFavoritePerson, findFavoritePlanet, findFavoriteVehicle, favoritesArray}) => {
     let displayCards;
 
     if(activeCategory === "is people"){
@@ -20,6 +20,17 @@ const CardSection = ({people, activeCategory, planets, vehicles, findFavoritePer
         displayCards= vehicles.map(vehicle => {
             return <VehicleCard {...vehicle} findFavoriteVehicle={findFavoriteVehicle} />
         })
+    } else if(activeCategory === "is favorites"){
+        displayCards= favoritesArray.map(favorite => {
+            if(favorite.category === "people"){
+                return <PeopleCard {...favorite} findFavoritePerson={findFavoritePerson}/>
+            }else if(favorite.category === "planets"){
+                return <PlanetCard {...favorite} findFavoritePlanet={findFavoritePlanet}/>
+            }else if(favorite.category === "vehicles"){
+                return <VehicleCard {...favorite} findFavoriteVehicle={findFavoriteVehicle} />
+            }
+        })
+
     }
    
     return(

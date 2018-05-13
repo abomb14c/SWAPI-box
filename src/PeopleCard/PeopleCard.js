@@ -2,7 +2,7 @@ import React from 'react'
 import './PeopleCard.css'
 
 const PeopleCard = (props) => {
-   const{name, planet, species, population, findFavoritePerson, id} = props
+   const{name, planet, species, population, findFavoritePerson, id, category} = props
  
     return (
         <article className="person-card">

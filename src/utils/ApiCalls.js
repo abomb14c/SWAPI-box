@@ -10,7 +10,8 @@
         id:`people${index}`,
         name: person.name,
         ...homePlanet,
-        species
+        species,
+        category:"people"
       }
     }) 
     return Promise.all(people)
@@ -40,7 +41,8 @@
         terrain: planet.terrain,
         population: planet.population,
         climate: planet.climate,
-        residents: planetResidents
+        residents: planetResidents,
+        category: "planets"
       }
     })
     
@@ -67,7 +69,8 @@
         name: vehicle.name,
         model: vehicle.model,
         type: vehicle.vehicle_class,
-        passengers: vehicle.passengers
+        passengers: vehicle.passengers,
+        category: "vehicles"
       }
     })
     return Promise.all(vehicles)
