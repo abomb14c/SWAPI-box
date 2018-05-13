@@ -2,7 +2,7 @@ import React from 'react'
 import './PlanetCard.css'
 
 const PlanetCard = (props) => {
-    const{name, terrain, population, climate, residents, findFavoritePlanet, id} = props
+    const{name, terrain, population, climate, residents, findFavoritePlanet, id, category} = props
 
      return (
          <article className="planet-card">
