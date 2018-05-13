@@ -1,4 +1,3 @@
- 
   const getPeopleData = async () => {
     const url = 'https://swapi.co/api/people/'
     const response = await fetch(url)
@@ -61,6 +60,7 @@
     const url = 'https://swapi.co/api/vehicles/'
     const response = await fetch(url)
     const data = await response.json()
+    console.log(JSON.stringify(data))
     const vehicles = await data.results.map(async (vehicle, index) => {
       return {
         id:`vehicle${index}`,
@@ -76,5 +76,7 @@
   export {
       getPeopleData,
       getPlanets,
-      getVehicles
+      getVehicles,
+      getHomeWorld,
+      getSpecies
   }

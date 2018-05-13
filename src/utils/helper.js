@@ -1,4 +1,3 @@
-
  const getCrawlText= (data) => {
   const results = data.results.map(result => {
     return {
@@ -15,6 +14,4 @@ const getRandom= (results) => {
 }
 
 
-export  {getCrawlText
-
-}
+export  {getCrawlText}

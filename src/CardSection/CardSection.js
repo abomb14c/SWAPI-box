@@ -4,7 +4,7 @@ import PlanetCard from '../PlanetCard/PlanetCard'
 import VehicleCard from '../VehicleCard/VehicleCard'
 import './CardSection.css'
 
-const CardSection = ({people, activeCategory, planets, vehicles, findFavoritePerson, findFavoritePlanet, findFavoriteVehicle}) => {
+const CardSection = ({people, activeCategory, planets, vehicles, findFavoritePerson, findFavoritePlanet, findFavoriteVehicle,}) => {
     let displayCards;
 
     if(activeCategory === "is people"){
