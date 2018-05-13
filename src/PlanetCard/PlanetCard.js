@@ -2,11 +2,12 @@ import React from 'react'
 import './PlanetCard.css'
 
 const PlanetCard = (props) => {
-    const{name, terrain, population, climate, residents} = props
+    const{name, terrain, population, climate, residents, findFavoritePlanet, id} = props
 
      return (
          <article className="planet-card">
             <section className="planet-name-section">
+            <button onClick={()=> findFavoritePlanet(id)}>Favorite</button>
                 <h1 className="planet-name">{name}</h1>
             </section>
             <div className="content-div">

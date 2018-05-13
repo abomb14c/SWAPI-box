@@ -2,12 +2,12 @@ import React from 'react'
 import './PeopleCard.css'
 
 const PeopleCard = (props) => {
-   const{name, planet, species, population} = props
-   
-    // console.log(name)
+   const{name, planet, species, population, findFavoritePerson, id} = props
+ 
     return (
         <article className="person-card">
             <section className="name-section">
+                <button onClick={()=>findFavoritePerson(id)}>Favorite</button>
                 <h1 className="person-name">{name}</h1>
             </section>
             <div className="content-div">
