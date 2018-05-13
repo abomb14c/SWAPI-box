@@ -41,7 +41,8 @@ describe("ApiCalls", () => {
           name: "Luke Skywalker",
           planet: undefined,
           population: undefined,
-          species: undefined
+          species: undefined,
+          category: "people"
         }
       ];
       await expect(getPeopleData()).resolves.toEqual(results);
@@ -113,7 +114,8 @@ describe("ApiCalls", () => {
           name: "Alderaan",
           population: "2000000000",
           residents: [undefined, undefined, undefined],
-          terrain: "grasslands, mountains"
+          terrain: "grasslands, mountains",
+          category: 'planets'
         }
       ];
       await expect(getPlanets()).resolves.toEqual(results);
@@ -144,7 +146,8 @@ describe("ApiCalls", () => {
           model: "Digger Crawler",
           name: "Sand Crawler",
           passengers: "30",
-          type: "wheeled"
+          type: "wheeled",
+          category: "vehicles"
         }
       ];
       await expect(getVehicles()).resolves.toEqual(results);
