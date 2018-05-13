@@ -121,4 +121,5 @@ const fetchedVehicles = {
     }
   ]
 };
+
 export { fetchedHomeWorld, fetchedPeopleData, fetchedSpecies, fetchedPlanets, fetchedVehicles };
