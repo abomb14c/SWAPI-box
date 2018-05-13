@@ -31,7 +31,6 @@ const CardSection = ({people, activeCategory, planets, vehicles, findFavoritePer
                 return <VehicleCard {...favorite} findFavoriteVehicle={findFavoriteVehicle} />
             }
         })
-
     }
    
     return(

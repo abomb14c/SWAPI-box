@@ -132,7 +132,6 @@ describe("ApiCalls", () => {
         })
       );
     });
-
     it("calls fetch with the correct argument", async () => {
       const url = "https://swapi.co/api/vehicles/"
       await getVehicles(url);

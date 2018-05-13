@@ -1,0 +1,588 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <VehicleCard
+    category="vehicles"
+    findFavoriteVehicle={[Function]}
+    id="Vehicle0"
+    model="subaru"
+    name="Roxanne"
+    type="bitchin"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <section
+          className="vehicle-name-section"
+>
+          <button
+                    onClick={[Function]}
+          >
+                    Favorite
+          </button>
+          <h1
+                    className="vehicle-name"
+          >
+                    Roxanne
+          </h1>
+</section>,
+        <div
+          className="content-div"
+>
+          <p
+                    className="description-title"
+          >
+                    Model
+          </p>
+          <h3
+                    className="description-content"
+          >
+                    subaru
+          </h3>
+</div>,
+        <hr />,
+        <div
+          className="content-div"
+>
+          <p
+                    className="description-title"
+          >
+                    Class
+          </p>
+          <h3
+                    className="description-content"
+          >
+                    bitchin
+          </h3>
+</div>,
+        <hr />,
+        <div
+          className="content-div"
+>
+          <p
+                    className="description-title"
+          >
+                    Passengers
+          </p>
+          <h3
+                    className="description-content"
+          />
+</div>,
+      ],
+      "className": "vehicle-card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              onClick={[Function]}
+>
+              Favorite
+</button>,
+            <h1
+              className="vehicle-name"
+>
+              Roxanne
+</h1>,
+          ],
+          "className": "vehicle-name-section",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Favorite",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Favorite",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Roxanne",
+              "className": "vehicle-name",
+            },
+            "ref": null,
+            "rendered": "Roxanne",
+            "type": "h1",
+          },
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="description-title"
+>
+              Model
+</p>,
+            <h3
+              className="description-content"
+>
+              subaru
+</h3>,
+          ],
+          "className": "content-div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Model",
+              "className": "description-title",
+            },
+            "ref": null,
+            "rendered": "Model",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "subaru",
+              "className": "description-content",
+            },
+            "ref": null,
+            "rendered": "subaru",
+            "type": "h3",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="description-title"
+>
+              Class
+</p>,
+            <h3
+              className="description-content"
+>
+              bitchin
+</h3>,
+          ],
+          "className": "content-div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Class",
+              "className": "description-title",
+            },
+            "ref": null,
+            "rendered": "Class",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "bitchin",
+              "className": "description-content",
+            },
+            "ref": null,
+            "rendered": "bitchin",
+            "type": "h3",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="description-title"
+>
+              Passengers
+</p>,
+            <h3
+              className="description-content"
+/>,
+          ],
+          "className": "content-div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Passengers",
+              "className": "description-title",
+            },
+            "ref": null,
+            "rendered": "Passengers",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "description-content",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h3",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <section
+            className="vehicle-name-section"
+>
+            <button
+                        onClick={[Function]}
+            >
+                        Favorite
+            </button>
+            <h1
+                        className="vehicle-name"
+            >
+                        Roxanne
+            </h1>
+</section>,
+          <div
+            className="content-div"
+>
+            <p
+                        className="description-title"
+            >
+                        Model
+            </p>
+            <h3
+                        className="description-content"
+            >
+                        subaru
+            </h3>
+</div>,
+          <hr />,
+          <div
+            className="content-div"
+>
+            <p
+                        className="description-title"
+            >
+                        Class
+            </p>
+            <h3
+                        className="description-content"
+            >
+                        bitchin
+            </h3>
+</div>,
+          <hr />,
+          <div
+            className="content-div"
+>
+            <p
+                        className="description-title"
+            >
+                        Passengers
+            </p>
+            <h3
+                        className="description-content"
+            />
+</div>,
+        ],
+        "className": "vehicle-card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                onClick={[Function]}
+>
+                Favorite
+</button>,
+              <h1
+                className="vehicle-name"
+>
+                Roxanne
+</h1>,
+            ],
+            "className": "vehicle-name-section",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Favorite",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Favorite",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Roxanne",
+                "className": "vehicle-name",
+              },
+              "ref": null,
+              "rendered": "Roxanne",
+              "type": "h1",
+            },
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="description-title"
+>
+                Model
+</p>,
+              <h3
+                className="description-content"
+>
+                subaru
+</h3>,
+            ],
+            "className": "content-div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Model",
+                "className": "description-title",
+              },
+              "ref": null,
+              "rendered": "Model",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "subaru",
+                "className": "description-content",
+              },
+              "ref": null,
+              "rendered": "subaru",
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="description-title"
+>
+                Class
+</p>,
+              <h3
+                className="description-content"
+>
+                bitchin
+</h3>,
+            ],
+            "className": "content-div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Class",
+                "className": "description-title",
+              },
+              "ref": null,
+              "rendered": "Class",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "bitchin",
+                "className": "description-content",
+              },
+              "ref": null,
+              "rendered": "bitchin",
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="description-title"
+>
+                Passengers
+</p>,
+              <h3
+                className="description-content"
+/>,
+            ],
+            "className": "content-div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Passengers",
+                "className": "description-title",
+              },
+              "ref": null,
+              "rendered": "Passengers",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "description-content",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
