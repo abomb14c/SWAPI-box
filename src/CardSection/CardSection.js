@@ -11,16 +11,16 @@ const CardSection = ({people, activeCategory, planets, vehicles, findFavoritePer
 
   if(activeCategory === "is people"){
     displayCards= people.map(person => {
-      return <PeopleCard {...person} findFavoritePerson={findFavoritePerson} key={'people'+ person}/>;
+      return <PeopleCard {...person} findFavoritePerson={findFavoritePerson} />;
     });
   } else if (activeCategory === "is planets"){
     displayCards= planets.map(planet => {
-      return <PlanetCard {...planet} findFavoritePlanet={findFavoritePlanet} key={'planet' + planet }/>;
+      return <PlanetCard {...planet} findFavoritePlanet={findFavoritePlanet} />;
     });
     
   } else if(activeCategory === "is vehicles") {
     displayCards= vehicles.map(vehicle => {
-      return <VehicleCard {...vehicle} findFavoriteVehicle={findFavoriteVehicle} key={'vehicle' + vehicle }/>;
+      return <VehicleCard {...vehicle} findFavoriteVehicle={findFavoriteVehicle} />;
     });
   } else if(activeCategory === "is favorites"){
     displayCards= favoritesArray.map(favorite => {

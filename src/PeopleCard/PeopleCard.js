@@ -8,8 +8,8 @@ const PeopleCard = (props) => {
   return (
     <article className="person-card">
       <section className="name-section">
-        <button onClick={()=>findFavoritePerson(id)}>Favorite</button>
         <h1 className="person-name">{name}</h1>
+        <button onClick={()=>findFavoritePerson(id)} className="favorites">Favorite</button>
       </section>
       <div className="content-div">
         <p className="description-title">Origin</p>
