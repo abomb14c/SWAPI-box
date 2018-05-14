@@ -4,6 +4,7 @@ import {getCrawlText} from './utils/helper.js'
 import { CrawlText } from './CrawlText/CrawlText'
 import {getPeopleData, getPlanets, getVehicles} from './utils/ApiCalls'
 import CardSection from './CardSection/CardSection'
+// import PropTypes from 'prop-types'
 
 class App extends Component {
   constructor(props) {

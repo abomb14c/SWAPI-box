@@ -1,5 +1,6 @@
 import React from 'react'
 import './PeopleCard.css'
+import propTypes from 'prop-types'
 
 const PeopleCard = (props) => {
    const{name, planet, species, population, findFavoritePerson, id, category} = props
@@ -28,4 +29,13 @@ const PeopleCard = (props) => {
     )
 }
 
+PeopleCard.propTypes = {
+    name: propTypes.string,
+    planet: propTypes.string,
+    species: propTypes.string,
+    population: propTypes.number,
+    findFavoritePerson: propTypes.func,
+    id: propTypes.string,
+    category: propTypes.string
+}
 export default PeopleCard

@@ -1,5 +1,6 @@
 import React from 'react'
 import './PlanetCard.css'
+import PropTypes from 'prop-types'
 
 const PlanetCard = (props) => {
     const{name, terrain, population, climate, residents, findFavoritePlanet, id, category} = props
@@ -33,5 +34,19 @@ const PlanetCard = (props) => {
      )
      
  }
+
+ PlanetCard.propTypes = {
+    name: PropTypes.string,
+    terrain: PropTypes.string,
+    population: PropTypes.number,
+    climate: PropTypes.string,
+    residents: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array
+    ]),
+    findFavoritePlanet: PropTypes.func,
+    id: PropTypes.string,
+    category: PropTypes.string
+}
  
  export default PlanetCard
