@@ -1,5 +1,6 @@
 import React from 'react'
 import './VehicleCard.css'
+import PropTypes from 'prop-types'
 
 const VehicleCard = (props) => {
    const{name, model, type, passengers, findFavoriteVehicle, id, category} = props
@@ -27,6 +28,15 @@ const VehicleCard = (props) => {
         </article>
     )
     
+}
+VehicleCard.propTypes = {
+    name: PropTypes.string,
+    model: PropTypes.string,
+    type: PropTypes.string,
+    passengers: PropTypes.number,
+    findFavoriteVehicle: PropTypes.func,
+    id: PropTypes.string,
+    category: PropTypes.string
 }
 
 export default VehicleCard

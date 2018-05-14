@@ -3,6 +3,7 @@ import PeopleCard from '../PeopleCard/PeopleCard'
 import PlanetCard from '../PlanetCard/PlanetCard'
 import VehicleCard from '../VehicleCard/VehicleCard'
 import './CardSection.css'
+import propTypes from 'prop-types'
 
 const CardSection = ({people, activeCategory, planets, vehicles, findFavoritePerson, findFavoritePlanet, findFavoriteVehicle, favoritesArray}) => {
 
@@ -10,16 +11,16 @@ const CardSection = ({people, activeCategory, planets, vehicles, findFavoritePer
 
     if(activeCategory === "is people"){
         displayCards= people.map(person => {
-            return <PeopleCard {...person} findFavoritePerson={findFavoritePerson}/>
+            return <PeopleCard {...person} findFavoritePerson={findFavoritePerson} key={'people'+ person}/>
         })
     } else if (activeCategory === "is planets"){
         displayCards= planets.map(planet => {
-            return <PlanetCard {...planet} findFavoritePlanet={findFavoritePlanet}/>
+            return <PlanetCard {...planet} findFavoritePlanet={findFavoritePlanet} key={'planet' + planet }/>
         })
     
     } else if(activeCategory === "is vehicles") {
         displayCards= vehicles.map(vehicle => {
-            return <VehicleCard {...vehicle} findFavoriteVehicle={findFavoriteVehicle} />
+            return <VehicleCard {...vehicle} findFavoriteVehicle={findFavoriteVehicle} key={'vehicle' + vehicle }/>
         })
     } else if(activeCategory === "is favorites"){
         displayCards= favoritesArray.map(favorite => {
@@ -40,4 +41,23 @@ const CardSection = ({people, activeCategory, planets, vehicles, findFavoritePer
     )
 }
 
+CardSection.propTypes = {
+    people: propTypes.oneOfType([
+        propTypes.object,
+        propTypes.array
+    ]),
+    activeCategory: propTypes.string,
+    planets: propTypes.oneOfType([
+        propTypes.object,
+        propTypes.array
+    ]),
+    vehicles: propTypes.oneOfType([
+        propTypes.object,
+        propTypes.array
+    ]),
+    findFavoritePerson: propTypes.func,
+    findFavoritePlanet: propTypes.func,
+    findFavoriteVehicle: propTypes.func,
+    favoritesArray: propTypes.array
+}
 export default CardSection
