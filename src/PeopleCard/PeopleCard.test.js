@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PeopleCard from './PeopleCard';
 import {shallow, mount} from 'enzyme';
-
-
-
 it('should match the snapshot', () => {
   let name='Alan';
   let planet= 'Earth';

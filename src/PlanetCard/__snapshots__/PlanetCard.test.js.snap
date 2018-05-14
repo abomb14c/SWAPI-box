@@ -30,16 +30,17 @@ ShallowWrapper {
         <section
           className="planet-name-section"
 >
-          <button
-                    onClick={[Function]}
-          >
-                    Favorite
-          </button>
           <h1
                     className="planet-name"
           >
                     Earth
           </h1>
+          <button
+                    className="favorites"
+                    onClick={[Function]}
+          >
+                    Favorite
+          </button>
 </section>,
         <div
           className="content-div"
@@ -111,33 +112,22 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <button
-              onClick={[Function]}
->
-              Favorite
-</button>,
             <h1
               className="planet-name"
 >
               Earth
 </h1>,
+            <button
+              className="favorites"
+              onClick={[Function]}
+>
+              Favorite
+</button>,
           ],
           "className": "planet-name-section",
         },
         "ref": null,
         "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Favorite",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Favorite",
-            "type": "button",
-          },
           Object {
             "instance": null,
             "key": undefined,
@@ -149,6 +139,19 @@ ShallowWrapper {
             "ref": null,
             "rendered": "Earth",
             "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Favorite",
+              "className": "favorites",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Favorite",
+            "type": "button",
           },
         ],
         "type": "section",
@@ -385,16 +388,17 @@ ShallowWrapper {
           <section
             className="planet-name-section"
 >
-            <button
-                        onClick={[Function]}
-            >
-                        Favorite
-            </button>
             <h1
                         className="planet-name"
             >
                         Earth
             </h1>
+            <button
+                        className="favorites"
+                        onClick={[Function]}
+            >
+                        Favorite
+            </button>
 </section>,
           <div
             className="content-div"
@@ -466,33 +470,22 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <button
-                onClick={[Function]}
->
-                Favorite
-</button>,
               <h1
                 className="planet-name"
 >
                 Earth
 </h1>,
+              <button
+                className="favorites"
+                onClick={[Function]}
+>
+                Favorite
+</button>,
             ],
             "className": "planet-name-section",
           },
           "ref": null,
           "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Favorite",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "Favorite",
-              "type": "button",
-            },
             Object {
               "instance": null,
               "key": undefined,
@@ -504,6 +497,19 @@ ShallowWrapper {
               "ref": null,
               "rendered": "Earth",
               "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Favorite",
+                "className": "favorites",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Favorite",
+              "type": "button",
             },
           ],
           "type": "section",
