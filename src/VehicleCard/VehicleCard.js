@@ -8,8 +8,8 @@ const VehicleCard = (props) => {
   return (
     <article className="vehicle-card">
       <section className="vehicle-name-section">
-        <button onClick={()=>findFavoriteVehicle(id)}>Favorite</button>
         <h1 className="vehicle-name">{name}</h1>
+        <button onClick={()=>findFavoriteVehicle(id)} className="favorites">Favorite</button>
       </section>
       <div className="content-div">
         <p className="description-title">Model</p>

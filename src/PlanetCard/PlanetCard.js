@@ -8,8 +8,8 @@ const PlanetCard = (props) => {
   return (
     <article className="planet-card">
       <section className="planet-name-section">
-        <button onClick={()=> findFavoritePlanet(id)}>Favorite</button>
         <h1 className="planet-name">{name}</h1>
+        <button onClick={()=> findFavoritePlanet(id)} className="favorites">Favorite</button>
       </section>
       <div className="content-div">
         <p className="description-title">Terrain</p>

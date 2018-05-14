@@ -11,6 +11,10 @@ hr {
     width: 60%;
 }
 
+.content-div {
+    margin: 15px;
+}
+
 .description-title{
     color: #EB544D;
     margin-bottom: 1%;
@@ -20,8 +24,12 @@ hr {
     font-size: 24px;
 }
 
-.content-div {
-    margin: 15px;
+.favorites {
+    position: relative;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
 }
 
 .vehicle-card {
@@ -50,8 +58,6 @@ hr {
     height: 140px;
     padding-top: 50px;
 }
-
-
 
 .residents{
     font-size: 18px;
