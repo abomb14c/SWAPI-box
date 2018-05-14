@@ -17,7 +17,7 @@ describe('App', () => {
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
-  })
+  });
   it('should have an initial state', () => {
     expect(wrapper.state().crawlData).toEqual([]);
     expect(wrapper.state().cleanPeople).toEqual([]);
@@ -25,66 +25,66 @@ describe('App', () => {
     expect(wrapper.state().cleanVehicles).toEqual([]);
     expect(wrapper.state().activeCategory).toBe("");
     expect(wrapper.state().favoritesArray).toEqual([]);
-  })
-describe('setPeopleData', () => {
+  });
+  describe('setPeopleData', () => {
   
-  it('should call getPeople data', async () => {
-    ApiCalls.getPeopleData= jest.fn().mockReturnValue(mockData.fetchedPeopleData);
+    it('should call getPeople data', async () => {
+      ApiCalls.getPeopleData= jest.fn().mockReturnValue(mockData.fetchedPeopleData);
     
-    await wrapper.instance().setPeopleData()
+      await wrapper.instance().setPeopleData();
     
-    expect(ApiCalls.getPeopleData).toHaveBeenCalled()
-  })
+      expect(ApiCalls.getPeopleData).toHaveBeenCalled();
+    });
   
-  it('should set state for people', async() => {
-    const expected = {
-      activeCategory: "is people",
-      id:`people0`,
-      name: "Luke",
-      planet: "Tattoine",
-      population: 20000,
-      species: "human"
-    }
+    it('should set state for people', async() => {
+      const expected = {
+        activeCategory: "is people",
+        id:`people0`,
+        name: "Luke",
+        planet: "Tattoine",
+        population: 20000,
+        species: "human"
+      };
     
-    ApiCalls.getPeopleData= jest.fn().mockReturnValue(expected);
-    await wrapper.instance().setPeopleData()
+      ApiCalls.getPeopleData= jest.fn().mockReturnValue(expected);
+      await wrapper.instance().setPeopleData();
     
-    expect(wrapper.instance().state.cleanPeople).toEqual(expected)
+      expect(wrapper.instance().state.cleanPeople).toEqual(expected);
+    });
   })
-})
-;
-describe('setPlanetData', () => {
-  it('should call getPlanets', async () => {
-    ApiCalls.getPlanets= jest.fn().mockReturnValue(mockData.fetchedPlanetData);
+  ;
+  describe('setPlanetData', () => {
+    it('should call getPlanets', async () => {
+      ApiCalls.getPlanets= jest.fn().mockReturnValue(mockData.fetchedPlanetData);
     
-    await wrapper.instance().setPlanetData()
+      await wrapper.instance().setPlanetData();
     
-    expect(ApiCalls.getPlanets).toHaveBeenCalled()
-  })
-  it('should set state for planets', async() => {
-    const expected = {
-      activeCategory: "is planets",
-      id:`planet0`,
-      name: "Tattoine",
-      terrain: "grassy, bro",
-      climate: "warm af",
-      residents: 40000
-    }
+      expect(ApiCalls.getPlanets).toHaveBeenCalled();
+    });
+    it('should set state for planets', async() => {
+      const expected = {
+        activeCategory: "is planets",
+        id:`planet0`,
+        name: "Tattoine",
+        terrain: "grassy, bro",
+        climate: "warm af",
+        residents: 40000
+      };
     
-    ApiCalls.getPlanets= jest.fn().mockReturnValue(expected);
-    await wrapper.instance().setPlanetData()
-    expect(wrapper.instance().state.cleanPlanets).toEqual(expected)
-  })
-});
+      ApiCalls.getPlanets= jest.fn().mockReturnValue(expected);
+      await wrapper.instance().setPlanetData();
+      expect(wrapper.instance().state.cleanPlanets).toEqual(expected);
+    });
+  });
 
   describe('setVehicleData', () => {
     it('should call getVehicles', async () => {
       ApiCalls.getVehicles= jest.fn().mockReturnValue(mockData.fetchedVehicles);
       
-      await wrapper.instance().setVehicleData()
+      await wrapper.instance().setVehicleData();
       
-      expect(ApiCalls.getVehicles).toHaveBeenCalled()
-    })
+      expect(ApiCalls.getVehicles).toHaveBeenCalled();
+    });
     it('should set state for vehicles', async() => {
       const expected = {
         activeCategory: "is vehicles",
@@ -93,19 +93,19 @@ describe('setPlanetData', () => {
         model: "S Class",
         type: "Pickup",
         passengers: 40000
-      }
+      };
       
       ApiCalls.getVehicles= jest.fn().mockReturnValue(expected);
-      await wrapper.instance().setVehicleData()
-      expect(wrapper.instance().state.cleanVehicles).toEqual(expected)
-    })
+      await wrapper.instance().setVehicleData();
+      expect(wrapper.instance().state.cleanVehicles).toEqual(expected);
+    });
     
   });
 
   describe('find methods', () => {
     
     it('should find favorite person', () => {
-      wrapper.setState({ cleanPeople: [{ id: 'Person0' }] })
+      wrapper.setState({ cleanPeople: [{ id: 'Person0' }] });
       const expected = [{ id: 'Person0' }];
 
       wrapper.instance().findFavoritePerson('Person0');
@@ -114,7 +114,7 @@ describe('setPlanetData', () => {
     });
 
     it('should find favorite planet', () => {
-      wrapper.setState({ cleanPlanets: [{ id: 'Planet0' }] })
+      wrapper.setState({ cleanPlanets: [{ id: 'Planet0' }] });
       const expected = [{ id: 'Planet0' }];
 
       wrapper.instance().findFavoritePlanet('Planet0');
@@ -122,7 +122,7 @@ describe('setPlanetData', () => {
       expect(wrapper.state().favoritesArray).toEqual(expected);
     });
     it('should find favorite vehicles', () => {
-      wrapper.setState({ cleanVehicles: [{ id: 'Vehicle0' }] })
+      wrapper.setState({ cleanVehicles: [{ id: 'Vehicle0' }] });
       const expected = [{ id: 'Vehicle0' }];
 
       wrapper.instance().findFavoriteVehicle('Vehicle0');
@@ -130,8 +130,8 @@ describe('setPlanetData', () => {
       expect(wrapper.state().favoritesArray).toEqual(expected);
     });
    
-    });
   });
+});
 
 
 
