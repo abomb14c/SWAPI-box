@@ -1,9 +1,9 @@
-*SWAPI-box*
+*SWAPI-box
 SWAPI-box is a react app that allows users to view Star Wars data from the Star Wars API https://swapi.co/documentation. There are four buttons that allow the user to browse through people, planets, vehicles and favorites. Users can add cards to favorites by clicking on the favorite button.
 
 React, JavaScript, and ES7 Async were used for this project.
 
-*Project Goals*
+*Project Goals
 1.Practicing and getting familiar with React components.
 
 2.Writing clean, well refactored code using ES6 syntax.
